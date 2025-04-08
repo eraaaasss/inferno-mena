@@ -1,98 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Inferno Mena</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #000;
-      color: white;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background: rgba(0, 0, 0, 0.7); /* شفافية */
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 999;
-    }
-
-    .logo {
-      font-size: 22px;
-      color: orange;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo span {
-      margin-left: 8px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      font-size: 15px;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: orange;
-    }
-
-    .register-btn {
-      background: transparent;
-      border: 2px solid orange;
-      color: orange;
-      padding: 10px 18px;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-left: 20px;
-      text-decoration: none;
-    }
-
-    .register-btn:hover {
-      background: orange;
-      color: black;
-    }
-
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ragefire Style</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="logo">🔥 <span>inferno-mena</span></div>
-
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">News</a>
-      <a href="#">Ranking</a>
-      <a href="#">Shop</a>
-      <a href="#">Downloads</a>
-      <a href="#">Events</a>
-      <a href="#">Inferno Pass</a>
+  <!-- 🔥 Navbar -->
+  <header class="navbar">
+    <div class="logo">🔥 Ragefire</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Ranking</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">List of Shame</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a class="highlight" href="#">Inferno Pass</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
       <a href="#" class="register-btn">Register</a>
-      <a href="#">Login</a>
+      <a href="#" class="login-link">Login</a>
     </div>
-  </div>
+  </header>
 
-  <!-- تحت هنا تحط محتوى الصفحة -->
-  <div style="margin-top: 100px; padding: 20px;">
-    <h1>🔥 Welcome to Inferno!</h1>
-    <p>Let the battle begin!</p>
-  </div>
+  <!-- 🎮 Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>🔥 Welcome to Ragefire!</h1>
+      <p>Let the battle begin!</p>
+    </div>
+  </section>
+
+  <!-- 👩‍🚀 Characters Section -->
+  <section class="characters">
+    <img src="https://i.imgur.com/DmhSlvT.png" alt="Character 1" />
+    <img src="https://i.imgur.com/AlWjSL0.png" alt="Character 2" />
+    <img src="https://i.imgur.com/kW3EVdc.png" alt="Character 3" />
+  </section>
 
 </body>
 </html>
