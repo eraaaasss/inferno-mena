@@ -1,4 +1,3 @@
-/* Reset & base style */
 * {
   margin: 0;
   padding: 0;
@@ -6,87 +5,117 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: white;
+  font-family: 'Orbitron', sans-serif;
   background-color: #000;
+  color: #fff;
 }
 
-/* Header */
-header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 24px;
   color: orange;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
-nav ul li a {
+nav a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  transition: color 0.3s;
 }
 
-/* Hero section */
+nav a:hover {
+  color: orange;
+}
+
+.highlight {
+  color: orange;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.register-btn {
+  background-color: transparent;
+  border: 2px solid orange;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: orange;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.register-btn:hover {
+  background-color: orange;
+  color: black;
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* 🎮 Hero Section */
 .hero {
   height: 100vh;
-  background-image: url('crossfire-bg.jpg'); /* ✨ استبدلها باسم صورتك */
+  background-image: url('https://i.imgur.com/1Xnh1aZ.jpg');
   background-size: cover;
   background-position: center;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 60px;
-  border-radius: 15px;
-  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .overlay h1 {
-  font-size: 48px;
+  font-size: 3rem;
   color: orange;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .overlay p {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 1.2rem;
 }
 
-.btn {
-  padding: 12px 24px;
-  background-color: orange;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+/* 👩‍🚀 Characters */
+.characters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  background-color: #111;
 }
 
-.btn:hover {
-  background-color: darkorange;
+.characters img {
+  max-width: 300px;
+  border-radius: 15px;
+  transition: transform 0.3s;
 }
 
-/* Footer */
-footer {
-  background-color: #000;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #ccc;
+.characters img:hover {
+  transform: scale(1.05);
 }
