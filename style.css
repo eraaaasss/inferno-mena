@@ -1,112 +1,48 @@
-/* Reset أساسي لجميع العناصر */
-* {
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  height: 100%;
+  font-family: 'Orbitron', sans-serif;
 }
 
-/* الأسلوب الأساسي للجسم مع الخلفية */
-body {
-  font-family: 'Orbitron', sans-serif;
-  background-image: url('images/background.jpg'); /* تأكد إن الصورة موجودة هنا */
+.hero {
+  background-image: url("images/crossfire.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-}
-
-/* شريط التنقل (Navbar) */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: orange;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: orange;
-}
-
-.register-btn {
-  background-color: orange;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.register-btn:hover {
-  background-color: #fff;
-  color: orange;
-}
-
-/* قسم الـ Hero */
-.hero {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
-  position: relative;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 40px;
-  border-radius: 10px;
   text-align: center;
 }
 
-.overlay h1 {
-  font-size: 3rem;
-  color: orange;
-  margin-bottom: 15px;
-}
-
-.overlay p {
-  font-size: 1.2rem;
-}
-
-/* قسم الشخصيات */
-.characters {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 50px 20px;
-  background-color: #111;
-  flex-wrap: wrap;
-}
-
-.characters img {
-  width: 250px;
+.content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  color: #fff;
 }
 
-.characters img:hover {
-  transform: scale(1.05);
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: #ff8000;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff9900;
 }
