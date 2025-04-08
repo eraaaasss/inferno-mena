@@ -10,71 +10,52 @@ body {
   color: #fff;
 }
 
+/* 🔥 Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
-  background-color: rgba(0, 0, 0, 0.85);
+  padding: 15px 30px;
+  background-color: #111;
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .logo {
   color: orange;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  list-style: none;
+  gap: 20px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: orange;
 }
 
-.highlight {
-  color: orange;
-}
-
-.auth-buttons {
-  display: flex;
-  gap: 15px;
-}
-
 .register-btn {
-  background-color: transparent;
-  border: 2px solid orange;
-  padding: 8px 16px;
-  border-radius: 5px;
-  color: orange;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.register-btn:hover {
   background-color: orange;
-  color: black;
-}
-
-.login-link {
-  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
   text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 /* 🎮 Hero Section */
 .hero {
-  height: 100vh;
+  height: 60vh;
   background-image: url('https://i.imgur.com/1Xnh1aZ.jpg');
   background-size: cover;
   background-position: center;
@@ -82,38 +63,39 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
+  padding-top: 80px;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
+  padding: 20px 30px;
   border-radius: 10px;
 }
 
 .overlay h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: orange;
-  margin-bottom: 10px;
 }
 
 .overlay p {
+  margin-top: 10px;
   font-size: 1.2rem;
 }
 
-/* 👩‍🚀 Characters */
+/* 👩‍🚀 Characters Section */
 .characters {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 60px 20px;
+  gap: 15px;
+  padding: 40px 20px;
   background-color: #111;
+  flex-wrap: wrap;
 }
 
 .characters img {
-  max-width: 300px;
-  border-radius: 15px;
-  transition: transform 0.3s;
+  width: 180px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 .characters img:hover {
