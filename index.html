@@ -2,57 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Inferno MENA</title>
+  <title>Crossfire - Inferno MENA</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
-      text-align: center;
+      box-sizing: border-box;
     }
-    nav {
-      background-color: #222;
-      padding: 15px 0;
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
     }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
+
+    .background {
+      background-image: url('https://i.ibb.co/NKPXGf7/crossfire-bg.gif'); /* أو استخدم رابط الصورة اللي أرفقتها */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .title {
+      font-size: 48px;
       font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffcc00;
     }
-    nav a:hover {
-      color: #f90;
+
+    .btn {
+      background-color: orange;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
-    img {
-      margin-top: 20px;
-      width: 200px;
+
+    .btn:hover {
+      background-color: #ff8800;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔥 صورة اللوغو -->
-  <img src="images/logo.png" alt="Inferno Logo">
-
-  <!-- ✅ قائمة التنقل -->
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">News</a>
-    <a href="#">Ranking</a>
-    <a href="#">Shop</a>
-    <a href="#">Downloads</a>
-    <a href="#">List Of Shame</a>
-    <a href="#">Events</a>
-    <a href="#">Inferno Pass</a>
-    <a href="#">Register + Player EXP</a>
-    <a href="#">Clans</a>
-    <a href="#">Login</a>
-  </nav>
-
-  <!-- ✨ العنوان والنص -->
-  <h1>أهلاً بالعالم 🌍🔥</h1>
-  <p>هذا أول موقع لي باستخدام GitHub Pages!</p>
+  <div class="background">
+    <div class="title">Welcome to Crossfire Inferno MENA 🔥</div>
+    <button class="btn">ابدأ اللعب الآن 🎮</button>
+  </div>
 
 </body>
 </html>
