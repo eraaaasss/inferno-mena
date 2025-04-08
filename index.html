@@ -1,78 +1,77 @@
-body {
-  background: url('your-background-image.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-}
-<header>
-  <nav class="navbar">
-    <img src="crossfire-logo.png" alt="Crossfire Logo" class="logo" />
-    <ul class="nav-links">
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">NEWS</a></li>
-      <li><a href="#">RANKING</a></li>
-      <li><a href="#">SHOP</a></li>
-      <li><a href="#">DOWNLOADS</a></li>
-      <li><a href="#">LIST OF SHAME</a></li>
-      <li><a href="#">EVENTS</a></li>
-      <li><a href="#">INFERNO PASS</a></li>
-      <li><a href="https://discord.gg/kyBTtBxf" target="_blank">DISCORD 💬</a></li>
-    </ul>
-    <div class="auth-buttons">
-      <a href="#" class="register-btn">👤 REGISTER</a>
-      <a href="#" class="login-btn">Login</a>
-    </div>
-  </nav>
-</header>
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-bottom: 1px solid #ffa500;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crossfire Fan Page</title>
+  <style>
+    body {
+      margin: 0;
+      background-image: url('your-background.jpg'); /* ← استبدلها برابط الخلفية الصح */
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
 
-.logo {
-  height: 50px;
-}
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.nav-links li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
+    .navbar a:hover {
+      color: #f90;
+    }
 
-.nav-links li a:hover {
-  color: #ffa500;
-}
+    .register-btn {
+      background-color: transparent;
+      border: 2px solid #f90;
+      padding: 8px 15px;
+      color: #f90;
+      border-radius: 5px;
+    }
 
-.auth-buttons {
-  display: flex;
-  gap: 15px;
-}
+    .discord-link {
+      margin: 20px auto;
+      text-align: center;
+    }
 
-.register-btn {
-  background-color: transparent;
-  border: 2px solid #ffa500;
-  color: #ffa500;
-  padding: 5px 15px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-}
+    .discord-link a {
+      font-size: 18px;
+      color: #7289DA;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
 
-.login-btn {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+  <div class="navbar">
+    <a href="#">HOME</a>
+    <a href="#">NEWS</a>
+    <a href="#">RANKING</a>
+    <a href="#">SHOP</a>
+    <a href="#">DOWNLOADS</a>
+    <a href="#">LIST OF SHAME</a>
+    <a href="#">EVENTS</a>
+    <a href="#">INFERNO PASS</a>
+    <a href="#" class="register-btn">📝 REGISTER</a>
+    <a href="#">Login</a>
+  </div>
+
+  <div class="discord-link">
+    <a href="https://discord.gg/kyBTtBxf" target="_blank">🎮 انضم لديسكوردنا</a>
+  </div>
+
+</body>
+</html>
