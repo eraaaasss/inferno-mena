@@ -1,18 +1,18 @@
-/* خلفية الموقع */
-body {
+* {
   margin: 0;
   padding: 0;
-  background-image: url("https://images.unsplash.com/photo-1602524205846-0b5fbd15e958?auto=format&fit=crop&w=1470&q=80");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  box-sizing: border-box;
 }
 
-/* الهيدر */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Header */
 header {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #000;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -21,45 +21,94 @@ header {
 
 .logo {
   color: orange;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
 }
 
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-size: 14px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-nav a:hover {
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
   color: orange;
 }
 
-/* الهيرو */
-.hero {
-  text-align: center;
-  margin-top: 100px;
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  top: 35px;
+  left: 0;
+  min-width: 150px;
+  border: 1px solid orange;
+  z-index: 10;
 }
 
-.hero h1 {
-  font-size: 40px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000;
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: orange;
+  color: #000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("https://i.imgur.com/tak0ES3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
 .btn {
-  margin-top: 20px;
-  padding: 15px 25px;
   background-color: orange;
-  color: black;
-  text-decoration: none;
+  color: #000;
+  padding: 12px 25px;
   font-weight: bold;
+  text-decoration: none;
   border-radius: 5px;
-  display: inline-block;
-  transition: background 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: gold;
+  background-color: white;
+  color: black;
 }
