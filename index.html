@@ -4,84 +4,131 @@
   <meta charset="UTF-8">
   <title>Crossfire Inferno MENA</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
       font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
       color: white;
     }
 
-    /* الخلفية */
-    body {
-      background-image: url('https://i.ibb.co/ZJptBGG/crossfire.jpg'); /* استبدل بالرابط اللي تحبه */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    /* الشريط العلوي */
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 15px 30px;
+    .header {
+      background-color: #111;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
     }
 
-    .navbar a {
-      color: #fff;
-      text-decoration: none;
-      margin: 10px 15px;
-      font-weight: bold;
+    .logo img {
+      height: 50px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-item {
       position: relative;
-      transition: 0.3s ease;
+      cursor: pointer;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
     }
 
-    .navbar a:hover {
-      color: #ffcc00;
+    .nav-item:hover {
+      color: #ffc107;
     }
 
-    /* عنوان رئيسي في المنتصف */
-    .main-title {
-      text-align: center;
-      margin-top: 20%;
-      font-size: 48px;
-      text-shadow: 2px 2px 10px #000;
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      border: 1px solid #ffc107;
+      top: 100%;
+      left: 0;
+      padding: 10px;
+      flex-direction: column;
     }
 
-    .main-title img {
-      max-width: 200px;
-      margin-bottom: 20px;
+    .nav-item:hover .dropdown {
+      display: flex;
+    }
+
+    .dropdown a {
+      color: white;
+      padding: 5px 0;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      color: #ffc107;
+    }
+
+    .auth-buttons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .register {
+      background-color: transparent;
+      color: #ffc107;
+      border: 2px solid #ffc107;
+      padding: 6px 12px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .register:hover {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    .login {
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login:hover {
+      color: #ffc107;
     }
   </style>
 </head>
 <body>
 
-  <!-- شريط التنقل -->
-  <div class="navbar">
-    <a href="#">Home</a>
-    <a href="#">News</a>
-    <a href="#">Ranking</a>
-    <a href="#">Shop</a>
-    <a href="#">Downloads</a>
-    <a href="#">List Of Shame</a>
-    <a href="#">Events</a>
-    <a href="#">Inferno Pass</a>
-    <a href="#">Register</a>
-    <a href="#">Player EXP</a>
-    <a href="#">Clans</a>
-    <a href="#">Login</a>
-  </div>
+  <div class="header">
+    <div class="logo">
+      <img src="https://i.ibb.co/ZJptBGG/crossfire.jpg" alt="Crossfire Logo">
+    </div>
 
-  <!-- العنوان الرئيسي -->
-  <div class="main-title">
-    <img src="https://i.ibb.co/ZJptBGG/crossfire-logo.png" alt="Crossfire Logo">
-    <div>🔥 Welcome to Crossfire MENA 🔥</div>
+    <div class="nav">
+      <div class="nav-item">Home</div>
+      <div class="nav-item">News</div>
+
+      <div class="nav-item">
+        Ranking
+        <div class="dropdown">
+          <a href="#">Player EXP</a>
+          <a href="#">Clans</a>
+        </div>
+      </div>
+
+      <div class="nav-item">Shop</div>
+      <div class="nav-item">Downloads</div>
+      <div class="nav-item">List Of Shame</div>
+      <div class="nav-item">Events</div>
+      <div class="nav-item">Inferno Pass</div>
+    </div>
+
+    <div class="auth-buttons">
+      <button class="register">REGISTER</button>
+      <div class="login">Login</div>
+    </div>
   </div>
 
 </body>
