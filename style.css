@@ -8,6 +8,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #000;
   color: #fff;
+  direction: rtl;
 }
 
 /* Header */
@@ -17,18 +18,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
-  color: orange;
   font-size: 24px;
   font-weight: bold;
+  color: orange;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .nav-links li {
@@ -40,7 +43,6 @@ header {
   text-decoration: none;
   font-weight: bold;
   padding: 8px 12px;
-  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -53,7 +55,7 @@ header {
   position: absolute;
   background-color: #111;
   top: 35px;
-  left: 0;
+  right: 0;
   min-width: 150px;
   border: 1px solid orange;
   z-index: 10;
@@ -100,7 +102,7 @@ header {
 
 .btn {
   background-color: orange;
-  color: #000;
+  color: black;
   padding: 12px 25px;
   font-weight: bold;
   text-decoration: none;
@@ -110,5 +112,36 @@ header {
 
 .btn:hover {
   background-color: white;
+  color: black;
+}
+
+/* Channels */
+.channels {
+  padding: 40px 20px;
+  background-color: #111;
+  text-align: center;
+}
+
+.channels h2 {
+  margin-bottom: 20px;
+}
+
+.channel-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.channel {
+  background-color: #222;
+  padding: 20px 30px;
+  border-radius: 8px;
+  border: 1px solid orange;
+  transition: 0.3s;
+}
+
+.channel:hover {
+  background-color: orange;
   color: black;
 }
