@@ -99,3 +99,64 @@
     JOIN DISCORD
   </a>
 </section>
+<style>
+  .navbar {
+    background: #000;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .nav-item {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .nav-link:hover {
+    color: orange;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    border: 1px solid orange;
+    padding: 10px 20px;
+    top: 40px;
+    z-index: 999;
+  }
+
+  .dropdown a {
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 5px 0;
+    text-decoration: none;
+  }
+
+  .dropdown a:hover {
+    color: orange;
+  }
+
+  .nav-item:hover .dropdown {
+    display: block;
+  }
+</style>
+
+<div class="navbar">
+  <div class="nav-item">
+    <a href="#" class="nav-link">RANKING</a>
+    <div class="dropdown">
+      <a href="#">PLAYER EXP</a>
+      <a href="#">CLANS</a>
+    </div>
+  </div>
+  <!-- باقي العناصر زي SHOP, DOWNLOADS, وغيره -->
+</div>
