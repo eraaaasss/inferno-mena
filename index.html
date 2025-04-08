@@ -1,188 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>Inferno MENA</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
+    * {
       margin: 0;
-      background-color: #111;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-image: url('رابط-الصورة-الخلفية'); /* هنا حط رابط الصورة */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 100vh;
       color: white;
+      position: relative;
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-      background: #000;
-    }
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #fff;
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      text-align: center;
     }
     nav a {
-      color: #fff;
-      margin: 0 12px;
+      color: white;
+      margin: 10px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
+      font-size: 18px;
     }
-    nav a:hover {
-      color: orange;
+    .subscribe-banner {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 20px;
+      display: none;
+      animation: fadeIn 2s forwards;
     }
-    .register-btn {
-      background-color: #000;
-      border: 2px solid orange;
-      padding: 10px 20px;
-      color: orange;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .register-btn i {
-      color: orange;
-    }
-    footer {
-      background-color: #000;
-      text-align: center;
-      padding: 20px;
-      color: #999;
-      font-size: 14px;
-    }
-    .highlight {
-      color: orange;
-      font-weight: bold;
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">🔥 inferno-mena</div>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">News</a>
-    <a href="#">Ranking</a>
-    <a href="#">Shop</a>
-    <a href="#">Downloads</a>
-    <a href="#">List of Shame</a>
-    <a href="#">Events</a>
-    <a href="#">Inferno Pass</a>
+    <a href="#">الرئيسية</a>
+    <a href="#">الأخبار</a>
+    <a href="#">الترتيب</a>
+    <a href="#">المتجر</a>
+    <a href="#">التنزيلات</a>
+    <a href="#">قائمة العار</a>
+    <a href="#">الأحداث</a>
+    <a href="#">بطاقة الجحيم</a>
+    <a href="#">التسجيل + نقاط الخبرة</a>
+    <a href="#">الكلانات</a>
+    <a href="#">تسجيل الدخول</a>
   </nav>
-  <button class="register-btn">
-    <i class="fas fa-user-plus"></i> REGISTER
-  </button>
-</header>
 
-<!-- ممكن هنا تضيف باقي محتوى الموقع مثل News Section أو Join Discord -->
+  <div class="subscribe-banner" id="subscribeBanner">
+    🎥 لا تنسوا الاشتراك في القناة ومشاركة الفيديوهات مع أصحابكم! 💬
+  </div>
 
-<footer>
-  COPYRIGHT © 2025 - ALL RIGHTS RESERVED BY <span class="highlight">INFERNO-MENA</span>
-</footer>
+  <script>
+    // نعرض الدعوة بعد 4 ثواني من دخول الصفحة
+    setTimeout(function() {
+      document.getElementById('subscribeBanner').style.display = 'block';
+    }, 4000);
+  </script>
 
 </body>
 </html>
-<section style="text-align: center; padding: 60px 20px; background-color: #111;">
-  <p style="color: red;">There's no news.</p>
-  <h2 style="color: white; font-size: 36px;">
-    JOIN THE <span style="color: orange;">COMMUNITY</span>
-  </h2>
-  <p style="color: #ccc;">Join our Discord community and enjoy the gameplay</p>
-  <a href="https://discord.com/invite/kyBTtBxf" target="_blank"
-     style="display: inline-block; background-color: orange; color: #fff; padding: 12px 25px; margin-top: 20px; font-weight: bold; border-radius: 8px; text-decoration: none; box-shadow: 0 0 10px orange;">
-    JOIN DISCORD
-  </a>
-</section>
-<style>
-  .navbar {
-    background: #000;
-    padding: 10px 20px;
-    font-family: Arial, sans-serif;
-  }
-
-  .nav-item {
-    position: relative;
-    display: inline-block;
-    margin-right: 20px;
-  }
-
-  .nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-  }
-
-  .nav-link:hover {
-    color: orange;
-  }
-
-  .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #111;
-    border: 1px solid orange;
-    padding: 10px 20px;
-    top: 40px;
-    z-index: 999;
-  }
-
-  .dropdown a {
-    display: block;
-    color: white;
-    font-weight: bold;
-    padding: 5px 0;
-    text-decoration: none;
-  }
-
-  .dropdown a:hover {
-    color: orange;
-  }
-
-  .nav-item:hover .dropdown {
-    display: block;
-  }
-</style>
-
-<div class="navbar">
-  <div class="nav-item">
-    <a href="#" class="nav-link">RANKING</a>
-    <div class="dropdown">
-      <a href="#">PLAYER EXP</a>
-      <a href="#">CLANS</a>
-    </div>
-  </div>
-  <!-- باقي العناصر زي SHOP, DOWNLOADS, وغيره -->
-</div>
-<style>
-  body {
-    background-image: url('PUT-YOUR-IMAGE-LINK-HERE');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-</style>
-<style>
-  body {
-    background-image: url('رابط-الصورة-الأساسية');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: 'Arial', sans-serif;
-  }
-</style>
