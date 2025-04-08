@@ -1,81 +1,105 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Inferno MENA</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-    body {
-      background-image: url('رابط-الصورة-الخلفية'); /* هنا حط رابط الصورة */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      height: 100vh;
-      color: white;
-      position: relative;
-    }
-    nav {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 15px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .subscribe-banner {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px 30px;
-      border-radius: 10px;
-      font-size: 20px;
-      display: none;
-      animation: fadeIn 2s forwards;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RageFire</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#">الأخبار</a>
-    <a href="#">الترتيب</a>
-    <a href="#">المتجر</a>
-    <a href="#">التنزيلات</a>
-    <a href="#">قائمة العار</a>
-    <a href="#">الأحداث</a>
-    <a href="#">بطاقة الجحيم</a>
-    <a href="#">التسجيل + نقاط الخبرة</a>
-    <a href="#">الكلانات</a>
-    <a href="#">تسجيل الدخول</a>
-  </nav>
+  <header>
+    <div class="logo">🔥 RageFire</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Ranking</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="subscribe-banner" id="subscribeBanner">
-    🎥 لا تنسوا الاشتراك في القناة ومشاركة الفيديوهات مع أصحابكم! 💬
-  </div>
+  <section class="hero">
+    <h1>🔥 Join The Battle!</h1>
+    <p>Step into the action and conquer the arena</p>
+    <a href="#" class="btn">Join Discord</a>
+  </section>
 
-  <script>
-    // نعرض الدعوة بعد 4 ثواني من دخول الصفحة
-    setTimeout(function() {
-      document.getElementById('subscribeBanner').style.display = 'block';
-    }, 4000);
-  </script>
+  <footer>
+    <p>© 2025 - All Rights Reserved by Rage MENA</p>
+  </footer>
 
 </body>
 </html>
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 10px 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: orange;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url('https://yourbackgroundimage.com'); /* حط رابط صورة هنا */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: orange;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: orange;
+  color: black;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #aaa;
+}
