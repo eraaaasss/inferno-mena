@@ -65,3 +65,31 @@ footer {
   background-color: #000;
   color: #aaa;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('background.jpg'); /* غيّر الاسم لو مختلف */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* ظل خفيف فوق الصورة */
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+}
