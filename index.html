@@ -80,3 +80,29 @@
 
 </body>
 </html>
+<a href="#" class="register-btn">
+  <span class="icon">👤</span> REGISTER
+</a>
+.register-btn {
+  display: inline-block;
+  color: #FFA500;
+  background-color: #000;
+  padding: 10px 25px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #FFA500;
+  border-radius: 0;
+  position: relative;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+.register-btn .icon {
+  margin-right: 8px;
+}
+
+.register-btn:hover {
+  background-color: #FFA500;
+  color: #000;
+}
