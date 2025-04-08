@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Crossfire - Inferno MENA</title>
+  <title>Crossfire Inferno MENA</title>
   <style>
     * {
       margin: 0;
@@ -13,48 +13,75 @@
     body, html {
       height: 100%;
       font-family: 'Segoe UI', sans-serif;
+      color: white;
     }
 
-    .background {
-      background-image: url('https://i.ibb.co/NKPXGf7/crossfire-bg.gif'); /* أو استخدم رابط الصورة اللي أرفقتها */
+    /* الخلفية */
+    body {
+      background-image: url('https://i.ibb.co/ZJptBGG/crossfire.jpg'); /* استبدل بالرابط اللي تحبه */
       background-size: cover;
       background-position: center;
-      height: 100vh;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 2px 2px 5px #000;
+      background-repeat: no-repeat;
     }
 
-    .title {
-      font-size: 48px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: #ffcc00;
-    }
-
-    .btn {
-      background-color: orange;
-      border: none;
+    /* الشريط العلوي */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 5px;
-      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      position: relative;
       transition: 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: #ff8800;
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    /* عنوان رئيسي في المنتصف */
+    .main-title {
+      text-align: center;
+      margin-top: 20%;
+      font-size: 48px;
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    .main-title img {
+      max-width: 200px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
 
-  <div class="background">
-    <div class="title">Welcome to Crossfire Inferno MENA 🔥</div>
-    <button class="btn">ابدأ اللعب الآن 🎮</button>
+  <!-- شريط التنقل -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">News</a>
+    <a href="#">Ranking</a>
+    <a href="#">Shop</a>
+    <a href="#">Downloads</a>
+    <a href="#">List Of Shame</a>
+    <a href="#">Events</a>
+    <a href="#">Inferno Pass</a>
+    <a href="#">Register</a>
+    <a href="#">Player EXP</a>
+    <a href="#">Clans</a>
+    <a href="#">Login</a>
+  </div>
+
+  <!-- العنوان الرئيسي -->
+  <div class="main-title">
+    <img src="https://i.ibb.co/ZJptBGG/crossfire-logo.png" alt="Crossfire Logo">
+    <div>🔥 Welcome to Crossfire MENA 🔥</div>
   </div>
 
 </body>
