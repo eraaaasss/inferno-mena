@@ -4,87 +4,159 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inferno MENA 3.0</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f0f;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0a0a0a;
       color: white;
     }
 
     header {
-      background-color: #1a1a1a;
+      background: url('header-bg.jpg') no-repeat center center / cover;
+      height: 100vh;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
-      padding: 15px 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      text-align: center;
+      position: relative;
     }
 
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+
+    header h1 {
+      font-size: 60px;
       color: #ff3c00;
-      letter-spacing: 1px;
+      z-index: 1;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #ccc;
+      z-index: 1;
     }
 
     nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.9);
+      padding: 10px 0;
+      z-index: 999;
       display: flex;
+      justify-content: center;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     nav a {
-      color: #ffffff;
+      color: white;
       text-decoration: none;
-      margin: 0 12px;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-weight: bold;
+      padding: 8px 15px;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #ff3c00;
+      background-color: #ff3c00;
+      border-radius: 5px;
     }
 
-    .main {
+    section {
+      padding: 100px 30px;
       text-align: center;
-      padding: 80px 20px;
     }
 
-    .main h1 {
-      font-size: 50px;
-      color: #ff3c00;
-      margin-bottom: 20px;
+    section:nth-child(even) {
+      background-color: #111;
     }
 
-    .main p {
-      font-size: 20px;
-      color: #ccc;
+    footer {
+      background-color: #1a1a1a;
+      color: #999;
+      text-align: center;
+      padding: 20px;
     }
-
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">Inferno MENA 3.0</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">News</a>
-      <a href="#">Ranking</a>
-      <a href="#">Shop</a>
-      <a href="#">Downloads</a>
-      <a href="#">List Of Shame</a>
-      <a href="#">Events</a>
-      <a href="#">Inferno Pass</a>
-      <a href="#">Login</a>
-      <a href="#">Register</a>
-    </nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#ranking">Ranking</a>
+    <a href="#shop">Shop</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#shame">List Of Shame</a>
+    <a href="#events">Events</a>
+    <a href="#pass">Inferno Pass</a>
+    <a href="#login">Login</a>
+    <a href="#register">Register</a>
+  </nav>
+
+  <header id="home">
+    <h1>Inferno MENA 3.0</h1>
+    <p>The Future of Competitive Gaming in the MENA Region</p>
   </header>
 
-  <div class="main">
-    <h1>🔥 Welcome to Inferno MENA 3.0 🔥</h1>
-    <p>Your hub for elite CrossFire gaming in the MENA region!</p>
-  </div>
+  <section id="news">
+    <h2>Latest News</h2>
+    <p>Stay tuned for upcoming tournaments and events!</p>
+  </section>
+
+  <section id="ranking">
+    <h2>Player Rankings</h2>
+    <p>Top players in the region are displayed here weekly.</p>
+  </section>
+
+  <section id="shop">
+    <h2>Shop</h2>
+    <p>Coming Soon: Merch, gear, and more!</p>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <p>Game updates, launchers, and helpful tools.</p>
+  </section>
+
+  <section id="shame">
+    <h2>List Of Shame</h2>
+    <p>Watch out cheaters... we see you 👀</p>
+  </section>
+
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <p>Get ready to compete and win!</p>
+  </section>
+
+  <section id="pass">
+    <h2>Inferno Pass</h2>
+    <p>Unlock premium content and rewards.</p>
+  </section>
+
+  <section id="login">
+    <h2>Login</h2>
+    <p>Coming soon: secure player login</p>
+  </section>
+
+  <section id="register">
+    <h2>Register</h2>
+    <p>Sign up and join the fight!</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Inferno MENA. All rights reserved.
+  </footer>
 
 </body>
 </html>
