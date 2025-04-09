@@ -11,6 +11,7 @@
       font-family: 'Arial', sans-serif;
       color: white;
     }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -18,11 +19,13 @@
       padding: 20px 60px;
       background: #000;
     }
+
     .logo {
       font-size: 22px;
       font-weight: bold;
       color: #fff;
     }
+
     nav a {
       color: #fff;
       margin: 0 12px;
@@ -30,9 +33,11 @@
       font-weight: bold;
       transition: 0.3s;
     }
+
     nav a:hover {
       color: orange;
     }
+
     .register-btn {
       background-color: #000;
       border: 2px solid orange;
@@ -45,9 +50,53 @@
       align-items: center;
       gap: 8px;
     }
+
     .register-btn i {
       color: orange;
     }
+
+    .hero {
+      background: url('https://cdn.discordapp.com/attachments/1061909752695410729/1227249096503834785/image.png?ex=66284f84&is=6615da84&hm=011ac2b9b6c10e09340e518222fa7296fc6477167fc105013b5a47a7e17cfb91&') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+      color: white;
+      text-shadow: 0 0 10px black;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+      margin-top: 10px;
+      text-shadow: 0 0 5px black;
+    }
+
+    .hero a {
+      background-color: #5865F2;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 25px;
+      display: inline-block;
+      box-shadow: 0 0 10px #5865F2;
+    }
+
+    section {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #111;
+    }
+
     footer {
       background-color: #000;
       text-align: center;
@@ -55,6 +104,7 @@
       color: #999;
       font-size: 14px;
     }
+
     .highlight {
       color: orange;
       font-weight: bold;
@@ -80,15 +130,15 @@
   </button>
 </header>
 
-<!-- ممكن هنا تضيف باقي محتوى الموقع مثل News Section أو Join Discord -->
+<!-- 🧨 Hero Section بالصورة الخلفية -->
+<div class="hero">
+  <h1>Inferno Mena</h1>
+  <p>نحن قادمون قريباً</p>
+  <a href="https://discord.com/invite/kyBTtBxf" target="_blank">💬 انضم إلى Discord</a>
+</div>
 
-<footer>
-  COPYRIGHT © 2025 - ALL RIGHTS RESERVED BY <span class="highlight">INFERNO-MENA</span>
-</footer>
-
-</body>
-</html>
-<section style="text-align: center; padding: 60px 20px; background-color: #111;">
+<!-- 🔥 Join Discord Section -->
+<section>
   <p style="color: red;">There's no news.</p>
   <h2 style="color: white; font-size: 36px;">
     JOIN THE <span style="color: orange;">COMMUNITY</span>
@@ -99,3 +149,10 @@
     JOIN DISCORD
   </a>
 </section>
+
+<footer>
+  COPYRIGHT © 2025 - ALL RIGHTS RESERVED BY <span class="highlight">INFERNO-MENA</span>
+</footer>
+
+</body>
+</html>
