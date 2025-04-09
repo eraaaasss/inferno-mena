@@ -1,55 +1,101 @@
-<!-- ✨ ستايل CSS -->
-<style>
-body {
-  margin: 0;
-  font-family: 'Cairo', sans-serif;
-  background: #000;
-  color: white;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inferno MENA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #000;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: orange;
+    }
+    .register-btn {
+      background-color: #000;
+      border: 2px solid orange;
+      padding: 10px 20px;
+      color: orange;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .register-btn i {
+      color: orange;
+    }
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #999;
+      font-size: 14px;
+    }
+    .highlight {
+      color: orange;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url('https://yourimageurl.com/bg.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+<header>
+  <div class="logo">🔥 inferno-mena</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">News</a>
+    <a href="#">Ranking</a>
+    <a href="#">Shop</a>
+    <a href="#">Downloads</a>
+    <a href="#">List of Shame</a>
+    <a href="#">Events</a>
+    <a href="#">Inferno Pass</a>
+  </nav>
+  <button class="register-btn">
+    <i class="fas fa-user-plus"></i> REGISTER
+  </button>
+</header>
 
-.hero .logo {
-  font-size: 60px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
-}
+<!-- ممكن هنا تضيف باقي محتوى الموقع مثل News Section أو Join Discord -->
 
-.hero .subtitle {
-  font-size: 22px;
-  color: #ccc;
-  margin-bottom: 25px;
-}
+<footer>
+  COPYRIGHT © 2025 - ALL RIGHTS RESERVED BY <span class="highlight">INFERNO-MENA</span>
+</footer>
 
-.hero .discord-btn {
-  background-color: #5865F2;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  display: inline-block;
-}
-
-.hero .discord-btn:hover {
-  background-color: #4752c4;
-}
-</style>
-
-<!-- ✨ محتوى HTML -->
-<div class="hero">
-  <div class="logo">Inferno Mena</div>
-  <div class="subtitle">نحن قادمون قريباً</div>
-  <a class="discord-btn" href="https://discord.com/invite/kyBTtBxf" target="_blank">💬 انضم إلى Discord</a>
-</div>
+</body>
+</html>
+<section style="text-align: center; padding: 60px 20px; background-color: #111;">
+  <p style="color: red;">There's no news.</p>
+  <h2 style="color: white; font-size: 36px;">
+    JOIN THE <span style="color: orange;">COMMUNITY</span>
+  </h2>
+  <p style="color: #ccc;">Join our Discord community and enjoy the gameplay</p>
+  <a href="https://discord.com/invite/kyBTtBxf" target="_blank"
+     style="display: inline-block; background-color: orange; color: #fff; padding: 12px 25px; margin-top: 20px; font-weight: bold; border-radius: 8px; text-decoration: none; box-shadow: 0 0 10px orange;">
+    JOIN DISCORD
+  </a>
+</section>
