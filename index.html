@@ -3,123 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Crossfire MENA</title>
+  <title>Inferno Mena</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
-      margin: 0;
-      font-family: "Tajawal", sans-serif;
-      background-color: #000;
-      color: white;
-    }
-
-    /* Navbar */
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.9);
-      overflow: hidden;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .navbar ul {
-      list-style-type: none;
+    * {
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif;
     }
 
-    .navbar li {
+    body, html {
+      height: 100%;
+      direction: rtl;
+    }
+
+    .background {
+      background-image: url('https://i.imgur.com/tak0ES3.jpg'); /* ← صورتك الأولى */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       position: relative;
     }
 
-    .navbar a {
-      display: block;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.65);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding-top: 100px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
       color: white;
       text-decoration: none;
       padding: 10px 15px;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: 0.3s;
     }
 
-    .navbar a:hover {
+    nav a:hover {
       background-color: #444;
-      border-radius: 5px;
+      border-radius: 6px;
     }
 
     /* Dropdown */
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.9);
-      min-width: 160px;
+      top: 40px;
+      background-color: #222;
+      min-width: 150px;
+      z-index: 999;
       border-radius: 5px;
-      z-index: 1;
-      right: 0;
-      top: 100%;
     }
 
     .dropdown-content a {
+      display: block;
       padding: 10px;
-      text-align: right;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    /* "قريباً" رسالة */
-    #soonMessage {
-      margin-top: 100px;
-      text-align: center;
+    .title-box h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
     }
 
-    #soonMessage h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
+    .title-box p {
+      font-size: 20px;
+      margin-bottom: 25px;
     }
 
-    #soonMessage p {
+    .discord-btn {
+      background-color: #5865F2;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
       font-size: 18px;
-      color: #aaa;
+      transition: 0.3s;
+    }
+
+    .discord-btn:hover {
+      background-color: #4752c4;
+    }
+
+    /* الرسالة */
+    .soon-message {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #ffcc00;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
+  <!-- القائمة -->
+  <nav>
     <ul>
-      <li><a href="#" onclick="showComingSoon()">News</a></li>
-
+      <li><a href="#" onclick="showSoon()">News</a></li>
       <li class="dropdown">
-        <a href="#" class="dropbtn">Ranking ⬇</a>
+        <a href="#">Ranking ▾</a>
         <div class="dropdown-content">
-          <a href="#" onclick="showComingSoon()">Player EXP</a>
-          <a href="#" onclick="showComingSoon()">Clans</a>
+          <a href="#" onclick="showSoon()">Player EXP</a>
+          <a href="#" onclick="showSoon()">Clans</a>
         </div>
       </li>
-
-      <li><a href="#" onclick="showComingSoon()">Shop</a></li>
-      <li><a href="#" onclick="showComingSoon()">Downloads</a></li>
-      <li><a href="#" onclick="showComingSoon()">List Of Shame</a></li>
-      <li><a href="#" onclick="showComingSoon()">Events</a></li>
-      <li><a href="#" onclick="showComingSoon()">Inferno Pass</a></li>
+      <li><a href="#" onclick="showSoon()">Shop</a></li>
+      <li><a href="#" onclick="showSoon()">Downloads</a></li>
+      <li><a href="#" onclick="showSoon()">List Of Shame</a></li>
+      <li><a href="#" onclick="showSoon()">Events</a></li>
+      <li><a href="#" onclick="showSoon()">Inferno Pass</a></li>
     </ul>
   </nav>
 
-  <!-- Placeholder Message -->
-  <div id="soonMessage">
-    <h2>قريباً</h2>
-    <p>هذه الصفحة قيد الإنشاء</p>
+  <!-- خلفية ومحتوى -->
+  <div class="background">
+    <div class="overlay">
+      <div class="title-box">
+        <h1>Inferno Mena</h1>
+        <p>نحن قادمون قريباً</p>
+        <a href="https://discord.gg/kyBTtBxf" class="discord-btn" target="_blank">
+          <i class="fab fa-discord"></i> انضم إلى Discord
+        </a>
+      </div>
+
+      <div id="soonBox" class="soon-message" style="display: none;">
+        🚧 هذه الصفحة قيد الإنشاء
+      </div>
+    </div>
   </div>
 
-  <!-- JavaScript -->
+  <!-- سكربت العرض -->
   <script>
-    function showComingSoon() {
-      document.getElementById('soonMessage').scrollIntoView({ behavior: "smooth" });
+    function showSoon() {
+      document.getElementById("soonBox").style.display = "block";
     }
   </script>
 
