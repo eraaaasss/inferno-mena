@@ -2,86 +2,121 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Tajawal', sans-serif;
 }
 
 body, html {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
   direction: rtl;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  z-index: 1000;
-}
-
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.navbar li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: color 0.3s ease;
-}
-
-.navbar li a:hover {
-  color: #ffcc00;
-}
-
-.hero {
-  background-image: url('background.jpg');
+.background {
+  background-image: url('https://i.imgur.com/tak0ES3.jpg'); /* ← صورتك الأصلية */
   background-size: cover;
   background-position: center;
   height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
-}
-
-.content {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 15px;
   text-align: center;
   color: white;
-  max-width: 500px;
+  padding-top: 100px;
 }
 
-.content h1 {
-  font-size: 36px;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #444;
+  border-radius: 6px;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  background-color: #222;
+  min-width: 150px;
+  z-index: 999;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.title-box h1 {
+  font-size: 48px;
   margin-bottom: 15px;
 }
 
-.content p {
+.title-box p {
   font-size: 20px;
   margin-bottom: 25px;
 }
 
 .discord-btn {
-  background-color: #5865f2;
-  color: #fff;
-  padding: 12px 24px;
+  background-color: #5865F2;
+  color: white;
+  padding: 12px 25px;
   text-decoration: none;
   border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-  transition: background 0.3s ease;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
 .discord-btn:hover {
   background-color: #4752c4;
+}
+
+.soon-message {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #ffcc00;
 }
