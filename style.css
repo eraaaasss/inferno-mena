@@ -4,144 +4,84 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #000;
-  color: #fff;
+  height: 100%;
   direction: rtl;
 }
 
-/* Header */
-header {
-  background-color: #000;
-  padding: 15px 30px;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.navbar ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: orange;
-}
-
-.nav-links {
+  justify-content: center;
   list-style: none;
-  display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-.nav-links li {
-  position: relative;
-}
-
-.nav-links a {
-  color: white;
+.navbar li a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: orange;
+.navbar li a:hover {
+  color: #ffcc00;
 }
 
-/* Dropdown */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #111;
-  top: 35px;
-  right: 0;
-  min-width: 150px;
-  border: 1px solid orange;
-  z-index: 10;
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-}
-
-.dropdown-menu li a:hover {
-  background-color: orange;
-  color: #000;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Hero Section */
 .hero {
-  background-image: url("https://i.imgur.com/tak0ES3.jpg");
+  background-image: url('background.jpg');
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 80px;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 15px;
   text-align: center;
+  color: white;
+  max-width: 500px;
 }
 
-.hero-text {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.hero-text h1 {
+.content h1 {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.btn {
-  background-color: orange;
-  color: black;
-  padding: 12px 25px;
-  font-weight: bold;
+.content p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.discord-btn {
+  background-color: #5865f2;
+  color: #fff;
+  padding: 12px 24px;
   text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: white;
-  color: black;
-}
-
-/* Channels */
-.channels {
-  padding: 40px 20px;
-  background-color: #111;
-  text-align: center;
-}
-
-.channels h2 {
-  margin-bottom: 20px;
-}
-
-.channel-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.channel {
-  background-color: #222;
-  padding: 20px 30px;
   border-radius: 8px;
-  border: 1px solid orange;
-  transition: 0.3s;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
 }
 
-.channel:hover {
-  background-color: orange;
-  color: black;
+.discord-btn:hover {
+  background-color: #4752c4;
 }
